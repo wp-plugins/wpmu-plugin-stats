@@ -1,66 +1,55 @@
-=== WPMU Theme Info ===
+=== WPMU Plugin Stats ===
 Contributors: DeannaS, kgraeme, MadtownLems
-Tags: Wordpress Multiuser, Themes, MU, WPMU, multisite, network
-Requires at least: 3.4
+Tags: WPMU, Wordpress Mu, Wordpress Multiuser, Plugin Stats , multisite, network
+Requires at least: 3.1
 Tested up to: 3.5.1
-Stable tag: 1.9
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Provides info to network admins and users on the popularity of themes. 
+Provides info to site admins as to which plugins are activated sitewide, and which blogs plugins are activated on.
 
 == Description ==
 
-WordPress Multisite has two ways to activate themes either sitewide, or on a blog-by-blog basis. But, there's no convenient way built-in to know which themes are actually being used, or by whom. This plugin addresses that issue by creating a "Theme Usage Info" sub-menu of the Network Admin theme menu. Included on the page are two tables of data - one of themes currently being used, and one of themes not currently being used. The currently used themes table provides information on how many blogs are using the theme, which blogs are using it, and whether or not the theme is currently activated site-wide. The table of unused themes provides information on whether the theme is currently activated sitewide.
+This plugin provides a snapshot view of which blogs are using any particular plugin. 
 
-In addition, network admins can choose to provide this information to their users via a toggle on the administration page.
+For sites that are using Plugin Commander to manage plugins, additional columns for the Plugin Commander settings of Auto Activate and User Controlled are included.
 
-If enabled, users will be able to view data on theme usage in Appearance -> themes for every theme except the currently activated theme. A single line of text is added just before the activate link indicating how many blogs are currently using the theme. When clicked, a scrolling list of themes is displayed in a thickbox:
+For sites that are using Plugin Manager, additional columns for the Plugin Manager settings of Auto Activate, User Controlled and Supporter Controlled are included.
 
-Thanks go out to <a href="http://wpmututorials.com/plugins/wordpress-mu-theme-stats/">Ron and Andrea</a> for their prior work in this area.
+Because the time to generate stats can be quite large, network plugin useage is cached and can be regenerated anytime via the "Regenerate" button.
+
+For users of <a href="http://firestats.cc/wiki/WPMUPluginCommander">Plugin Commander</a> or <a href="http://wpmudev.org/project/wpmu-plugin-manager">Plugin Manager</a>, it also provides information on which plugins are auto activated, user controlled, or supporter-controlled (for Plugin Manager). 
 
 = Development =
 
-* Repository: [wp-repository](https://github.com/wp-repository) / [wpmu-theme-usage-info](https://github.com/wp-repository/wpmu-theme-usage-info)
-* Issue-Tracker: [WPMU Theme Info Issues](https://github.com/wp-repository/wpmu-theme-usage-info/issues) **Please use the Issue-Tracker at GitHub!!**
-* Translation: [Translate > WPMU Theme Info](https://translate.foe-services.de/projects/cets_theme_info)
+* Repository: [wp-repository](https://github.com/wp-repository) / [wpmu-plugin-stats](https://github.com/wp-repository/wpmu-plugin-stats)
+* Issue-Tracker: [WPMU Plugin Stats Issues](https://github.com/wp-repository/wpmu-theme-usage-info/issues) **Please use the Issue-Tracker at GitHub!!**
+* Translation: [Translate > WPMU Plugin Stats](https://translate.foe-services.de/projects/cets-plugin-stats)
 
 == Installation ==
 
-1. Place the cets\_theme\_info.php file and directory in the wp-content/mu-plugins folder.
-1. Go to site admin -> Theme Usage Info to view information and configure user access.
+1. Place the cets\_plugin\_info.php file and directory in the wp-content/mu-plugins folder.
+2. In 3.1+, go to network admin -> Plugins -> Plugin Stats to view information.
 
 == Screenshots ==
 
-1. Network Admin view of list of used and unused themes.
-2. Network Admin view of list toggle controls for user access.
-3. User view of theme popularity information.
-4. User view of blogs using theme.
-
-== Frequently Asked Questions ==
-
-Nothing yet.
+1. Adminstrator view of list of plugins installed.
+2. Administrator view of list of plugins installed with Plugin Commander settings.
+3. Administrator view of list of plugins intalled with Plugin Manager settings. (View also shows regenerate button.)
 
 == Changelog ==
 
-= 1.9 =
-* fix + update of tablesort js library
-* tabbed settings
+= 1.5 =
+* translation support
 * fixes for WP 3.5
-* move of the development repo to GitHub
+* fix + update of tablesort js library
 
-= 1.8 =
-* Added a check for making sure the Theme Files are present, and will display a message if there is a site using a theme that no longer exists
+= 1.3.2 =
+* minor cleanups, should work with 3.4.2, and we'll go from here with better support!
 
-= 1.7 =
-* Updated for 3.4. Because of the massive Theme info API change with 3.4, this plugin now REQURES 3.4+ to function
-
-= 1.2 - 1.6 =
-* Unknown exactly because I wasn't maintaining this plugin for public use for these versions, but the following occurred in here:
-	* Properly enqueue scripts
-	* Updated for 3.1.  Then later dropped support for anything below 3.4
-	* fixed lots of notices and warnings
-	* properly store data after the 3.3 add_site_option changes
+= 1.2 =
+* updated for new network admin menu in 3.1, eliminated use of plugin on less than WP 3.0
 
 = 1.1 =
-* Adding Show/Hide blogs on the administrative page.
+* minor tweak to eliminate content shift
