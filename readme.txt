@@ -1,9 +1,9 @@
 === WPMU Plugin Stats ===
-Contributors: DeannaS, kgraeme, MadtownLems
+Contributors: DeannaS, kgraeme, MadtownLems, wp-repository
 Tags: WPMU, Wordpress Mu, Wordpress Multiuser, Plugin Stats , multisite, network
-Requires at least: 3.1
-Tested up to: 3.5.1
-Stable tag: 1.5
+Requires at least: 3.8.0
+Tested up to: 3.9-alpha
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,25 +12,20 @@ Provides info to site admins as to which plugins are activated sitewide, and whi
 == Description ==
 
 This plugin provides a snapshot view of which blogs are using any particular plugin. 
-
 For sites that are using Plugin Commander to manage plugins, additional columns for the Plugin Commander settings of Auto Activate and User Controlled are included.
-
 For sites that are using Plugin Manager, additional columns for the Plugin Manager settings of Auto Activate, User Controlled and Supporter Controlled are included.
-
 Because the time to generate stats can be quite large, network plugin useage is cached and can be regenerated anytime via the "Regenerate" button.
-
-For users of <a href="http://firestats.cc/wiki/WPMUPluginCommander">Plugin Commander</a> or <a href="http://wpmudev.org/project/wpmu-plugin-manager">Plugin Manager</a>, it also provides information on which plugins are auto activated, user controlled, or supporter-controlled (for Plugin Manager). 
 
 = Development =
 
-* Repository: [wp-repository](https://github.com/wp-repository) / [wpmu-plugin-stats](https://github.com/wp-repository/wpmu-plugin-stats)
+* GitHub Repository: [wpmu-plugin-stats](https://github.com/wp-repository/wpmu-plugin-stats)
 * Issue-Tracker: [WPMU Plugin Stats Issues](https://github.com/wp-repository/wpmu-theme-usage-info/issues) **Please use the Issue-Tracker at GitHub!!**
-* Translation: [Translate > WPMU Plugin Stats](https://translate.foe-services.de/projects/cets-plugin-stats)
+* Translation: [Translate > WPMU Plugin Stats](http://wp-translate.org/projects/wpmu-plugin-stats)
 
 == Installation ==
 
-1. Place the cets\_plugin\_info.php file and directory in the wp-content/mu-plugins folder.
-2. In 3.1+, go to network admin -> Plugins -> Plugin Stats to view information.
+1. Install by searching "WPMU Plugin Stats" on Plugins > Add New > Search
+2. Activate by clicking "Network Activate"
 
 == Screenshots ==
 
@@ -39,6 +34,16 @@ For users of <a href="http://firestats.cc/wiki/WPMUPluginCommander">Plugin Comma
 3. Administrator view of list of plugins intalled with Plugin Manager settings. (View also shows regenerate button.)
 
 == Changelog ==
+
+= 2.0 =
+ * added some hooks
+ * testing for WP 3.8+ (Trunk: 3.9-alpha)
+ * removal of build tests for now
+ * removed support for all external plugins for now
+  *added cleanup of settings on removal (via uninstall.php)
+
+= 1.6 =
+* added Spanish translation by Eduardo Larequi (https://github.com/elarequi)
 
 = 1.5 =
 * translation support
