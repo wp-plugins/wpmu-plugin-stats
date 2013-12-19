@@ -1,8 +1,8 @@
 === WPMU Plugin Stats ===
 Contributors: DeannaS, kgraeme, MadtownLems, wp-repository
 Tags: WPMU, Wordpress Mu, Wordpress Multiuser, Plugin Stats , multisite, network
-Requires at least: 3.8.0
-Tested up to: 3.9-alpha
+Requires at least: 3.8
+Tested up to: 3.8
 Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -28,8 +28,6 @@ Because the time to generate stats can be quite large, network plugin useage is 
 == Screenshots ==
 
 1. Adminstrator view of list of plugins installed.
-2. Administrator view of list of plugins installed with Plugin Commander settings.
-3. Administrator view of list of plugins intalled with Plugin Manager settings. (View also shows regenerate button.)
 
 == Changelog ==
 
