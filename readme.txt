@@ -16,8 +16,8 @@ This plugin give you a count and the listing of sites using your installed plugi
 Usage data is cached in a Transient (non-autoloading) but the data collection process can be a very expensive operation depending on plugin and (especially) site count.
 Check the [FAQ](https://wordpress.org/plugins/wpmu-plugin-stats/faq/ "Frequently Asked Questions") for more details on caching.
 
-** Requires a WordPress Multisite Installation **
-* JavaScript needs to be enabled to see the list of sites using a plugin *
+> __Requires a WordPress Multisite Installation__
+> JavaScript is required to toggle the list of sites using a plugin
 
 = Development =
 
